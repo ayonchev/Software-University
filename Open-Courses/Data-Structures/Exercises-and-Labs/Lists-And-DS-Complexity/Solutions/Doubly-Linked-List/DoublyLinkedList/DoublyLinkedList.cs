@@ -46,10 +46,8 @@ public class DoublyLinkedList<T> : IEnumerable<T>
 
         if (Count >= 1)
             oldLastNode.Next = Last;
-        if(Count == 0)
-        {
+        if (Count == 0)
             First = Last;
-        }
 
         Count++;
     }
