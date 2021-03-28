@@ -15,10 +15,10 @@ public class Program
         
         Console.WriteLine($"Subtrees of sum {requestedSum}:");
         subTrees.ForEach(st =>
-        {
-            st.Each(node => Console.Write($"{node} "));
-            Console.WriteLine();
-        }
+            {
+                st.Each(node => Console.Write($"{node} "));
+                Console.WriteLine();
+            }
         );
     }
 

@@ -14,6 +14,7 @@ public class Program
     }
     static int GetDeepestNode(Tree<int> inputTree)
     {
+        //This tuple contains the value of the current node ( Item1 ) and the level of the current node ( Item 2 ).
         List<Tuple<int, int>> leaves = new List<Tuple<int, int>>();
         GetLeaves(inputTree, leaves, 0);
         int result = leaves.OrderByDescending(l => l.Item2).First().Item1;
