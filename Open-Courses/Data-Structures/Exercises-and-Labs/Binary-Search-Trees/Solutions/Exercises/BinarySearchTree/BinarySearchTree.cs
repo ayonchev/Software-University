@@ -46,7 +46,6 @@ public class BinarySearchTree<T> : IBinarySearchTree<T> where T : IComparable
         if (node == null)
         {
             node = new Node(element);
-            node.Count = 1;
         }
         else if (element.CompareTo(node.Value) < 0)
         {
@@ -326,6 +325,8 @@ public class BinarySearchTree<T> : IBinarySearchTree<T> where T : IComparable
         //return this.Select(this.Rank(element) + 1);
         Node parent = null;
         Node current = this.root;
+
+        FindElement(element);
 
         while (!current.Value.Equals(element))
         {
